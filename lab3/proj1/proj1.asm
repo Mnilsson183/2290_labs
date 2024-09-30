@@ -43,6 +43,9 @@ mov eax, xval
 mov edx, OFFSET output_msg_x
 call WriteString
 call WriteDec
+mov dl, 60                          ; set cursor
+mov dh, 6
+call gotoxy
 mov edx, OFFSET output_msg_hex
 call WriteString
 call WriteHex
@@ -52,6 +55,9 @@ mov eax, yval
 mov edx, OFFSET output_msg_y
 call WriteString
 call WriteDec
+mov dl, 60                          ; set cursor
+mov dh, 7
+call gotoxy
 mov edx, OFFSET output_msg_hex
 call WriteString
 call WriteHex
@@ -62,6 +68,9 @@ add eax, xval
 mov edx, OFFSET output_msg_plus
 call WriteString
 call WriteDec
+mov dl, 60                          ; set cursor
+mov dh, 9
+call gotoxy
 mov edx, OFFSET output_msg_hex
 call WriteString
 call WriteHex
@@ -72,6 +81,9 @@ sub eax, yval
 mov edx, OFFSET output_msg_minu
 call WriteString
 call WriteDec
+mov dl, 60                          ; set cursor
+mov dh, 10
+call gotoxy
 mov edx, OFFSET output_msg_hex
 call WriteString
 call WriteHex
