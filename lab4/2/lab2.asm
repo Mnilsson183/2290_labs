@@ -1,11 +1,12 @@
 INCLUDE Irvine32.inc
 .data
-msgs BYTE "Enter index: ", 0, "Value: ", 0, 0, 0
+msgs BYTE "Enter index: ", 0, "Value: ", 0
 .code
 main PROC
 mov edx, OFFSET msgs
 call WriteString
 call ReadDec
+sub eax, 1
 mov ecx, eax
 mov eax, 1
 mov ebx, 1
