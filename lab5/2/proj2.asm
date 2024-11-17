@@ -1,5 +1,5 @@
 INCLUDE Irvine32.inc
-arr_size = 50
+arr_size = 41
 .data
 arr DWORD arr_size DUP(0)
 str_number BYTE "Fibonacci number ", 0
